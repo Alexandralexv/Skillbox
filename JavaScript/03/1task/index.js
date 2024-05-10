@@ -1,7 +1,9 @@
 let cardInBankATM = true;
 let avaibleAmount = 500;
+let input = prompt("Сколько хотите снять?");
+console.log(`Ввод: ${input}`);
 
-if (cardInBankATM && prompt("Сколько хотите снять?") <= avaibleAmount) {
+if (cardInBankATM && input <= avaibleAmount) {
     console.log("Операция выполняется");
 }
 else {
