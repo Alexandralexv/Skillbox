@@ -9,7 +9,35 @@
 </head>
 
 <body>
+    <h1>Поиск минимального и максимального числа</h1>
+    <p class="all-elements"></p>
+    <button class="min">Найти минимальное число</button>
+    <button class="max">Найти максимальное число</button>
+    <p>Минимальное число: <span class="minNumber"></span></p>
+    <p>Максимальное число: <span class="maxNumber"></span></p>
 
+    <script>
+        let arr = [12, 5, 8, 20, 3, 16];
+
+        let allElements = document.querySelector(".all-elements");
+        let minn = document.querySelector(".min");
+        let maxx = document.querySelector(".max");
+        let minNumber = document.querySelector(".minNumber");
+        let maxNumber = document.querySelector(".maxNumber");
+
+        for (let i of arr) {
+            allElements.textContent += i + ',';
+        }
+
+        minn.onclick = function () {
+            minNumber.textContent = '';
+            minNumber.textContent += Math.min(...arr);
+        }
+        maxx.onclick = function () {
+            maxNumber.textContent = '';
+            maxNumber.textContent += Math.max(...arr);
+        }
+    </script>
 </body>
 
 </html>
